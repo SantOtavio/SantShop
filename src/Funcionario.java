@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Funcionario extends Pessoa{
     int registration;
@@ -10,5 +11,19 @@ public class Funcionario extends Pessoa{
         super(nome, cpf, email, telefone, genero, idade);
         this.registration = registration;
         this.password = password;
+    }
+
+    public static void sellProduct(){
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.println("Insira o código do produto:");
+        int codigo = sc.nextInt();
+
+        System.out.println("Insira o valor do produto:");
+        double valor = sc.nextDouble();
+
+        System.out.println("Insira o código do cliente:");
+        int clientCode = sc.nextInt();
     }
 }

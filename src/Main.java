@@ -43,16 +43,33 @@ public class Main {
 
                 switch (choose) {
                     case 1:
+                        sellProduct();
                         break;
                     case 2:
                         registerMenu(choose);
                         break;
                     case 3:
+                        System.out.println("Insira o código do produto para verificação de estoque:");
+                        int productCode = sc.nextInt();
+                        verifyInventory(productCode);
                         break;
                     case 4:
+                        registerProduct();
                         break;
                 }
         }
+    }
+
+    private static void sellProduct() {
+        Funcionario.sellProduct();
+    }
+
+    private static void verifyInventory(int productCode) {
+        Produto.verifyInventory(productCode);
+    }
+
+    private static void registerProduct() {
+        Produto.registerProduct();
     }
 
     private static void registerMenu(int choose) {

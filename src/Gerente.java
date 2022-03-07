@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Gerente {
+public class Gerente extends Pessoa {
     static Scanner sc = new Scanner(System.in);
 
     public static void registerColaborator(String pessoaCpf, String pessoaEmail, String pessoaTelefone, int pessoaIdade, String pessoaNome, String pessoaGenero) {

@@ -65,7 +65,7 @@ public class Main {
     }
 
     private static void verifyInventory(int productCode) {
-        Produto.verifyInventory(productCode);
+        Funcionario.verifyInventory(productCode);
     }
 
     private static void registerProduct() {
@@ -96,6 +96,7 @@ public class Main {
             Gerente.registerColaborator(pessoaCpf , pessoaEmail , pessoaTelefone , pessoaIdade , pessoaNome , pessoaGenero);
         } else if (choose == 2) {
             Cliente.registerClient(pessoaCpf , pessoaEmail , pessoaTelefone , pessoaIdade , pessoaNome , pessoaGenero);
+            
         } else {
             System.out.println("ERROR");
             registerMenu(choose);

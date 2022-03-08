@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa {
     int registration;
     String password;
 
@@ -13,9 +13,8 @@ public class Funcionario extends Pessoa{
         this.password = password;
     }
 
-    public static void sellProduct(){
+    public static void sellProduct() {
         Scanner sc = new Scanner(System.in);
-
 
         System.out.println("Insira o código do produto:");
         int codigo = sc.nextInt();
@@ -25,5 +24,15 @@ public class Funcionario extends Pessoa{
 
         System.out.println("Insira o código do cliente:");
         int clientCode = sc.nextInt();
+    }
+
+    public static void verifyInventory(int productCode) {
+        for (int i = 0; i < Produto.listProducts.size(); i++) {
+            if (productCode == Produto.listProducts.get(i).codigo) {
+                System.out.println("Quantidade: " + Produto.listProducts.get(i).qtd);
+            } else {
+                System.out.println("Código do produto invalido ou não cadastrado no sistema!");
+            }
+        }
     }
 }

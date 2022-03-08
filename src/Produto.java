@@ -89,14 +89,4 @@ public class Produto {
         Produto pTemp = new Produto(codigo, qtd, desc, marca, modelo, valor);
         listProducts.add(pTemp);
     }
-
-    public static void verifyInventory(int productCode) {
-        for (int i = 0; i < listProducts.size(); i++) {
-            if (productCode == listProducts.get(i).codigo) {
-                System.out.println("Quantidade: " + listProducts.get(i).qtd);
-            } else {
-                System.out.println("Código do produto invalido ou não cadastrado no sistema!");
-            }
-        }
-    }
 }

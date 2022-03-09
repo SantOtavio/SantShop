@@ -65,28 +65,18 @@ public class Produto {
         this.valor = valor;
     }
 
-    public static void registerProduct() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Insira o código do produto:");
-        int codigo = sc.nextInt();
-
-        System.out.println("Insira a descrição do produto:");
-        String desc = sc.next();
-
-        System.out.println("Insira a marca do produto:");
-        String marca = sc.next();
-
-        System.out.println("Insira o modelo do produto:");
-        String modelo = sc.next();
-
-        System.out.println("Insira o valor do produto:");
-        double valor = sc.nextDouble();
-
-        System.out.println("Insira a quantidade de produtos:");
-        int qtd = sc.nextInt();
-
+    public static void registerProduct(int codigo , int qtd , String marca , String modelo , String desc , double valor) {
         Produto pTemp = new Produto(codigo, qtd, desc, marca, modelo, valor);
         listProducts.add(pTemp);
+    }
+
+    public static void verifyInventory(int productCode) {
+        for (int i = 0; i < listProducts.size(); i++) {
+            if (productCode == listProducts.get(i).codigo) {
+                System.out.println("Quantidade: " + listProducts.get(i).qtd);
+            } else {
+                System.out.println("Código do produto invalido ou não cadastrado no sistema!");
+            }
+        }
     }
 }

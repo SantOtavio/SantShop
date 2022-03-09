@@ -1,17 +1,11 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
-public class Pessoa {
+public class Pessoa extends Endereco{
     String nome , cpf , email, telefone, genero;
     int idade;
 
 
-    public Pessoa(){
-        super();
-    }
+    public Pessoa(String pais, String estado, String cidade, String bairro, String rua, String complemento, int numero, int cep, String nome, String cpf, String email, String telefone, String genero, int idade) {
 
-    public Pessoa(String nome, String cpf, String email, String telefone, String genero, int idade) {
-        super();
+        super(pais, estado, cidade, bairro, rua, complemento, numero, cep);
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
@@ -19,6 +13,7 @@ public class Pessoa {
         this.genero = genero;
         this.idade = idade;
     }
+
 
     public String getNome() {
         return nome;
